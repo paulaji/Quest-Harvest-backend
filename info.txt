@@ -1,0 +1,5 @@
+npm init -y // intialize default Node.js project
+npm install --save-dev typescript // install typescript to work with
+npx tsc --init // for tsconfig.json
+npm install express // to install express
+npm install --save-dev @types/express // typescript express
