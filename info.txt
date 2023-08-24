@@ -6,3 +6,16 @@ npm install --save-dev @types/express // typescript express
 
 npx tsc // to compile the typescript code to js
 node server.js // run the compiled javascript file
+
+in tsconfig.json specify the outdir to which typescript compiled javascript code will be stored in
+in this case we have specified to the folder called dist which stands for distributions
+but this will only be used in production
+therefore, for hot reload, we will be using nodemon
+
+npm install --save-dev nodemon // to install nodemon as development dependancy for hot reloads
+npm install --save-dev ts-node // nodemon for typescript
+npx nodemon src/server.ts // to start nodemon hot reload server or use
+npm start // the script has been defined in the package.json
+
+the thing to note here is that we used to type the command npx tsc to compile/transpile the typescript code into javascript
+now that we have installed nodemon and it's support for typescript, nodemon will take care of the transpilation
